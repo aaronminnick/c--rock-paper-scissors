@@ -50,5 +50,13 @@ namespace RockPaperScissors.Tests
       Assert.AreEqual("Draw!", Throw.ChooseWinner("paper", "paper"));
       Assert.AreEqual("Draw!", Throw.ChooseWinner("scissors", "scissors"));
     }
+
+    [TestMethod]
+    public void ChooseWinner_NonRockPaperScissorsInputsRejected_String()
+    {
+      Assert.AreEqual("Bad input for player 1. rock, paper, or scissors expected.", Throw.ChooseWinner("puppies", "paper"));
+      Assert.AreEqual("Bad input for player 2. rock, paper, or scissors expected.", Throw.ChooseWinner("paper", "puppies"));
+      Assert.AreEqual("Bad input for both players. rock, paper, or scissors expected.", Throw.ChooseWinner("puppies", "puppies"));
+    }
   }
 }

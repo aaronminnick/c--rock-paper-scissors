@@ -1,3 +1,4 @@
+using System;
 
 namespace RockPaperScissors.Models
 {
@@ -8,10 +9,16 @@ namespace RockPaperScissors.Models
 
     }
 
+
     public static string ChooseWinner(string playerOneMove, string playerTwoMove)
     {
+      string[] validAnswers = {"rock", "paper", "scissors"};
       string result = "";
-      if (playerOneMove == playerTwoMove) 
+      if (!Array.Exists(validAnswers, element => element == playerOneMove) && !Array.Exists(validAnswers, element => element == playerTwoMove))
+      {
+        result = "Bad input for both players. rock, paper, or scissors expected.";
+      }
+      else if (playerOneMove == playerTwoMove) 
       {
         result = "Draw!";
       }
