@@ -43,5 +43,12 @@ namespace RockPaperScissors.Tests
       Assert.AreEqual("Player 2 wins with scissors!", Throw.ChooseWinner("paper", "scissors"));
     }
 
+    [TestMethod]
+    public void ChooseWinner_SameMoveReturnsDraw_String()
+    {
+      Assert.AreEqual("Draw!", Throw.ChooseWinner("rock", "rock"));
+      Assert.AreEqual("Draw!", Throw.ChooseWinner("paper", "paper"));
+      Assert.AreEqual("Draw!", Throw.ChooseWinner("scissors", "scissors"));
+    }
   }
 }
