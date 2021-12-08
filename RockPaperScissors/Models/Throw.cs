@@ -9,7 +9,6 @@ namespace RockPaperScissors.Models
 
     }
 
-
     public static string ChooseWinner(string playerOneMove, string playerTwoMove)
     {
       string[] validAnswers = {"rock", "paper", "scissors"};
