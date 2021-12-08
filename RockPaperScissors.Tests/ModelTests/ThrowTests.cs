@@ -42,5 +42,6 @@ namespace RockPaperScissors.Tests
     {
       Assert.AreEqual("Player 2 wins with scissors!", Throw.ChooseWinner("paper", "scissors"));
     }
+
   }
 }
